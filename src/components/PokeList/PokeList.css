@@ -1,0 +1,89 @@
+.pokeList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 940px;
+    margin: auto;
+    height: 490px;
+    overflow-y: scroll;
+    padding-left: 12px;
+}
+
+/* Работает в Firefox */
+.pokeList {
+    scrollbar-width: thin;
+    scrollbar-color: #f1c7f1 #f5f5f5;
+}
+
+/* Работает в Chrome, Edge и Safari */
+.pokeList::-webkit-scrollbar {
+    width: 12px;
+}
+
+.pokeList::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}
+
+.pokeList::-webkit-scrollbar-thumb {
+    background-color: #f1c7f1;
+    border-radius: 20px;
+    border: 3px solid #f5f5f5;
+}
+
+.pokeItem {
+    min-width: 220px;
+    max-width: 220px;
+    max-height: 240px;
+    border-radius: 8px;
+    background: #f1c7f1;
+    flex: 1;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.pokeItem:hover {
+    background: #f3abf3;
+}
+.pokeItem > img {
+    margin-left: auto;
+}
+
+.filters__wrapper {
+    align-items: center;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.filter__name {
+    width: 220px;
+}
+.filter__tag {
+    max-width: 680px;
+}
+
+.ant-space-item {
+    flex: 1;
+}
+.ant-layout-header {
+    background: unset;
+    border-bottom: 1px solid #d3d3d3;
+}
+.ant-layout-content {
+    padding: 5px 0;
+}
+
+@media screen and (max-width: 470px) {
+    .filters__wrapper {
+        flex-direction: column;
+    }
+    .filter__name,
+    .filter__tag {
+        margin: 0 auto;
+    }
+}
